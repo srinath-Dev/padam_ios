@@ -38,31 +38,30 @@ class HeaderUIView: UIView {
         button.layer.cornerRadius = 5
         button.setImage(UIImage(systemName: "play.fill"), for: .normal)
         button.tintColor = UIColor.black
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+       
         button.setTitleColor(UIColor.black, for: .normal)
         return button
     }()
     
     private let infoButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Info", for: .normal)
+        button.setTitle(" Info", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "info.circle"), for: .normal)
         button.tintColor = UIColor.white
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+       
         button.setTitleColor(UIColor.white, for: .normal)
         return button
     }()
     
     private let listButton: UIButton = {
         let button = UIButton()
-        button.setTitle("My List", for: .normal)
+        button.setTitle(" My List", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
         button.tintColor = UIColor.white
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         button.setTitleColor(UIColor.white, for: .normal)
         return button
     }()
@@ -81,22 +80,24 @@ class HeaderUIView: UIView {
     private func applyContraints() {
         
         let playButtonContraints = [
-            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 160),
+
             playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             playButton.widthAnchor.constraint(equalToConstant: 110),
-            playButton.heightAnchor.constraint(equalToConstant: 40)
+            playButton.heightAnchor.constraint(equalToConstant: 40),
+            playButton.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            
         ]
         
         let infoButtonConstraints = [
             
-            infoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             infoButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
             infoButton.widthAnchor.constraint(equalToConstant: 110),
+            infoButton.rightAnchor.constraint(equalTo: self.rightAnchor)
         ]
         
         let listButtonConstraints = [
             
-            listButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            listButton.leftAnchor.constraint(equalTo: self.leftAnchor),
             listButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
             listButton.widthAnchor.constraint(equalToConstant: 110),
         ]

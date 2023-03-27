@@ -89,7 +89,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else {return}
-        header
+       // header
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
